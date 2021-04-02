@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	
+
+
+
+	function getDataFromServer(url){
+		console.log('getDataFromServer esta sendo executado... ')
+		return new Promise((resolve, reject)=> {
+			setTimeout(()=>{
+			console.log('dados da '+url)
+			resolve({
+				data: 'Dados que queremos'
+			})
+		}, 1500)
+
+		})
+
+	}
+
+	getDataFromServer('www.api.com')
+		.then(data=>{
+			console.log('Then sendo executado. Data: ', data);
+		})
+
+
+</script>
+</body>
+</html>
